@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="../CSS/fetchapiusingjquery.css">
+    <title>Fetch API using Jquery</title>
+</head>
+
+<body>
+    <h1 class="display-1 heading">Fetch API using Jquery</h1>
+    <div class="container second">
+        <form class="row g-3" onsubmit="return false">
+            <div class="col-auto">
+                <label for="staticpincode" id="pincodelabel">Enter Your Pincode</label>
+                <!-- <p class="mb-1" id="staticpincode"></p> -->
+            </div>
+            <div class="col-auto">
+                <!-- <label for="inputPassword2" class="visually-hidden">Password</label> -->
+                <input type="number" class="form-control" id="inputpincode" placeholder="Pincode">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" id="getDataBtn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="mb-4">Pincode Details</h1>
+            <table class="table user-table">
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Postcode</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="d-none loader-row" id="spinner">
+                        <td colspan="3">
+                            <i class="fa fa-spin fa-sync-alt fa-2x"></i>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td id="area"></td>
+                        <td id="state"></td>
+                        <td id="country"></td>
+                        <td id="latitude"></td>
+                        <td id="longitude"></td>
+                        <td id="postcode"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="d-none alert">
+                            <div class="alert alert-danger">Error While Fetching Data</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="../JS/fetchapiusingjquery.js"></script>
+
+</html>
