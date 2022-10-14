@@ -17,8 +17,8 @@ $(document).ready(function () {
             beforeSend: function () {
                 // THIS FUNCTION CALL BEFORE AJAX API HITS
                 // HERE WE CAN SHOW OUR LOADER.
-                console.log('Beforesend Function Initiated');
-                console.log(inputpincode.value.length);
+//                 console.log('Beforesend Function Initiated');
+//                 console.log(inputpincode.value.length);
 
                 if (inputpincode.value.length < 6 || inputpincode.value.length > 6) {
                     alert("Please Enter Valid Input");
